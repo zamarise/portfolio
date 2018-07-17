@@ -7,8 +7,8 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 // define the home page route
-router.get('/', function(req, res) {
-  res.send('Hello world');
+router.get('/index', function(req, res) {
+  res.send('');
 });
 // define the about route
 router.get('/about', function(req, res) {

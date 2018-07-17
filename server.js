@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+
+//  load the router module in your existing Express server ap
 const profile = require('./profile');
 
 const app = express();
@@ -8,7 +10,10 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/profile', profile);
+
+// use the router module provided by Express for home page
+// The Router in Express is like a mini Express app (with middleware logic) that can be embedded inside of an Express app.
+app.use('/', profile);
 
 // Here we're setting the views directory to be ./views
 // this lets the app know where to find the template files
