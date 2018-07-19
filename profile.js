@@ -10,8 +10,12 @@ router.use(function timeLog(req, res, next) {
 router.get('/index', function(req, res) {
   res.send('');
 });
-// define the about route
-router.get('/about', function(req, res) {
-  res.send('About me');
-});
+// // define the about route
+// router.get('/about', function(req, res) {
+//   res.send('About me');
+// });
+// // define the portfolio route
+// router.get('/portfolio', function(req, res) {
+//   res.send('Portfolio');
+// });
 module.exports = router;

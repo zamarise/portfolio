@@ -2,139 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Zam's Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <style>
-        body {
-            background: -webkit-linear-gradient(to left, rgb(202, 255, 253), rgb(246, 190, 229));
-            background: linear-gradient(to left, rgb(202, 255, 253), rgb(246, 190, 229));
-            padding-top: 15px;
-            padding-right: 50px;
-            padding-left: 50px;
-        }
+  <title>Zam | Full Stack Web Developer</title>
 
-        h1,
-        h2,
-        h3 {
-            color: #1F2421;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        }
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <link rel="stylesheet" href="css/mystyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
-        hr {
-            height: 1px;
-            color: white;
-            background: white;
-            font-size: 0;
-            border: 0;
-            margin-bottom: 30px;
-            align-content: center;
-        }
+  <script src="js/menu.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        a {
-            border: 2px solid #fffcdc;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            transition: color 0.2s ease-out, opacity 0.2s ease-out;
-
-        }
-
-        a:link,
-        a:visited {
-            text-decoration: none;
-            color: #1F2421;
-        }
-
-        a:hover {
-            color: #A40E4C;
-            opacity: 0.5;
-        }
-
-        a:active {
-            top: 2px;
-            color: #A40E4C;
-            opacity: 0.5;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-8">
-                <h2>
-                    <ul>
-                        <li>
-                            <p>
-                                <a href="/">Home</a>
-                            </p>
-                            <p>
-                                <a href="/about">About Me</a>
-                            </p>
-                            <p>
-                                <a href="/contact">Contact Me</a>
-                            </p>
-                        </li>
-                    </ul>
-                </h2>
-            </div>
-            <div class="col-xs-6 col-md-4">
-                <h1>
-                    <p> Hi, I'm
-                        <a href="/about">
-                            <%= person.firstName %>
-                                <%= person.lastName %>
-                        </a>
-                    </p>
-                    <p>
-                        <a href="/contact">Contact Me</a>
-                    </p>
-                </h1>
-            </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/contact">Contact</a>
+  </div>
 
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="..." alt="...">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
-                        <p>
-                            <a href="#" class="btn btn-primary" role="button">Button</a>
-                            <a href="#" class="btn btn-default" role="button">Button</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="thumbnail">
-                    <img src="..." alt="...">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
-                        <p>
-                            <a href="#" class="btn btn-primary" role="button">Button</a>
-                            <a href="#" class="btn btn-default" role="button">Button</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="thumbnail">
-                    <img src="..." alt="...">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
-                        <p>
-                            <a href="#" class="btn btn-primary" role="button">Button</a>
-                            <a href="#" class="btn btn-default" role="button">Button</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="container-fluid">
 
-        </div>
+    <img src="images/zam-anza.jpg" alt="Zam" class="responsive center pic" />
+    <div class="hometext">
+      <div class="a">
+        <h1>Hi, I'm Zam.</h1>
+
+        <h2>Full stack developer for hire.</h2>
+        <h4>Based in San Diego, CA.</h4>
+      </div>
     </div>
+    <!-- <div align="right">
+      <a href="https://github.com/zamarise">
+        <i class="fab fa-github fa-7x icons"></i>
+      </a>
+    </div> -->
+
+  </div>
+
 </body>
 
 </html>
