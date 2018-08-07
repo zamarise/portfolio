@@ -30,14 +30,22 @@
   </div>
 
   <div class="container-fluid">
-
-    <img src="images/zam-anza.jpg" alt="Zam" class="responsive center pic" />
     <div class="hometext">
       <div class="a">
-        <h1>Hi, I'm Zam.</h1>
 
-        <h2>Full stack developer for hire.</h2>
-        <h4>Based in San Diego, CA.</h4>
+        <img src="images/zam-anza.jpg" alt="Zam" class="responsive center pic" />
+
+        <h1 align="center">Hi, I'm
+          <a href="/about" class="dotted">
+            <%= person.firstName %>
+          </a>
+        </h1>
+
+        <h2 align="center">
+          <a href="/portfolio" class="dotted">Full-stack developer</a> for
+          <a href="/contact" class="dotted">hire</a>
+        </h2>
+        <h4 align="center">Based in San Diego, CA, USA</h4>
       </div>
     </div>
     <!-- <div align="right">

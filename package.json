@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/zamarise/portfolio#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "morgan": "^1.9.0"

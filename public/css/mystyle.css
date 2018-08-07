@@ -10,25 +10,25 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   color: #3b3a36;
   padding: 10px;
 }
 
 hr {
   height: 1px;
-  color: snow;
-  background: snow;
+  background: #52154e;
   font-size: 0;
   border: 0;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   align-content: center;
 }
 
 a {
   color: #9fa8a3;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: auto;
 }
 
 a:hover {
@@ -114,22 +114,47 @@ a:hover {
 .hometext {
   text-align: left;
   height: auto;
+  margin-bottom: 60px;
 }
 
 .hometext > .a {
-  text-align: center;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+  width: auto;
   height: auto;
 }
 
-.portfolio {
+.dotted {
+  color: #f6bee5;
+  border-bottom: dotted;
+  border-bottom-width: thin;
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  text-shadow: black 0.05em 0.05em 0.05em;
+}
+
+/* .portfolio {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 85%;
   padding: 10px;
-}
+} */
 
 .thumbnail {
   background-color: transparent;
   border: 10px solid transparent;
 }
+
+.contact-me {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  padding: 10px;
+}
+
+/* .about-me  */

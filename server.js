@@ -1,6 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
+const dotenv = require('dotenv').config({ path: './sendgrid.env' });
 const bodyParser = require('body-parser');
+const sgMail = require('@sendgrid/mail');
 
 // //  load the router module in your existing Express server ap
 // const profile = require('./profile');
@@ -12,6 +14,7 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // // use the router module provided by Express for home page
 // // The Router in Express is like a mini Express app (with middleware logic) that can be embedded inside of an Express app.
@@ -52,6 +55,31 @@ app.get('/portfolio', (req, res) => {
 });
 
 app.post('/thanks', (req, res) => {
+  const { email, subject, firstName, lastName, message } = req.body;
+
+  const msg = {
+    to: process.env.MY_EMAIL,
+    from: email,
+    subject: subject,
+    html:
+      '<strong>Name: </strong>' + firstName + '&nbsp;' + lastName + '&nbsp;' + '<strong>Message: </strong>' + message
+  };
+  sgMail
+    .send(msg)
+    .then(() => {
+      return console.log('It worked!');
+    })
+    .catch(error => {
+      //Log friendly error
+      return console.error(error.toString());
+
+      //Extract error msg
+      const { message, code, response } = error;
+
+      //Extract response msg
+      const { headers, body } = response;
+    });
+
   res.render('thanks', { contact: req.body });
 });
 
